@@ -22,7 +22,7 @@ div.pagination {
         cursor: default;
         svg {
           path {
-            fill: $color-black-hapi-2;
+            fill: $color-black-1;
           }
         }
       }
@@ -42,7 +42,7 @@ div.pagination {
         display: inline-flex;
         margin-right: 0.75rem;
         justify-content: center;
-        color: $color-grey-hapi-1;
+        color: $color-grey-1;
         background-color: transparent;
         &.dots {
           cursor: default;
@@ -51,11 +51,11 @@ div.pagination {
           }
         }
         &.current {
-          color: $color-yellow-hapi-1;
-          background-color: $color-yellow-hapi-4;
+          color: $color-yellow-1;
+          background-color: $color-yellow-2;
         }
         &:hover {
-          background-color: $color-grey-hapi-8;
+          background-color: $color-grey-2;
         }
         &:last-child {
           margin-right: 0;
