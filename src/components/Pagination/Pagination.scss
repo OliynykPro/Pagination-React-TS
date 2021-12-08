@@ -1,0 +1,66 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+div.pagination {
+  display: flex;
+  margin: 1.25rem 0;
+  align-items: center;
+  justify-content: center;
+  span {
+    &.prev-button {
+      transform: rotate(180deg);
+    }
+    &.prev-button,
+    &.next-button {
+      line-height: 0;
+      cursor: pointer;
+      svg {
+        path {
+          @include transition;
+        }
+      }
+      &.inactive {
+        cursor: default;
+        svg {
+          path {
+            fill: $color-black-hapi-2;
+          }
+        }
+      }
+    }
+    &.pages-wrapper {
+      margin: 0 3.125rem;
+      span {
+        @include transition;
+        width: 24px;
+        height: 24px;
+        line-height: 1;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 50%;
+        font-size: 0.75rem;
+        align-items: center;
+        display: inline-flex;
+        margin-right: 0.75rem;
+        justify-content: center;
+        color: $color-grey-hapi-1;
+        background-color: transparent;
+        &.dots {
+          cursor: default;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        &.current {
+          color: $color-yellow-hapi-1;
+          background-color: $color-yellow-hapi-4;
+        }
+        &:hover {
+          background-color: $color-grey-hapi-8;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
